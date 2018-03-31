@@ -1,16 +1,20 @@
 new Vue({
     el:'#vue-app',
     data: {
-        first_name: 'Ant',
-        last_name: 'Chamberlin',
-        job: 'Frontend Developer',
-        website: 'https://www.amazon.co.uk',
-        websiteTag: '<a href="https://www.amazon.co.uk" target="_blank">Portfolio Site</a>',
-        company: 'MNA Digital'
-    }, 
+        age: 25,
+        x: 0,
+        y: 0
+    },
     methods: {
-        greet: function(time) {
-            return 'Good' + ' ' + time + ' ' + this.first_name;  
+        add: function(inc){
+            this.age += inc;
+        },
+        subtract: function(dec) {
+            this.age -= dec;
+        },
+        updateXY: function(event) {
+            this.x = event.offsetX;
+            this.y = event.offsetY;
         }
-    }
+    } 
 });
