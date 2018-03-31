@@ -13,6 +13,10 @@
     <div id="vue-app">
         <h4>{{ greet('Morning') }}</h4>
         <p>{{ first_name + ' ' + last_name }} is a {{ job }} at {{ company }}</p>
+        <input type="text" v-bind:placeholder="first_name">
+        <!-- use : for shorthand -->
+        <!-- <a v-bind:href="website" target="_blank">Link to Portfolio</a> -->
+        <p v-html="websiteTag"></p>
     </div>
 
     <script src="app.js"></script>
