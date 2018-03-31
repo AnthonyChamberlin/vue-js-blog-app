@@ -1,6 +1,14 @@
 new Vue({
     el:'#vue-app',
     data: {
-        name: 'Ant'
+        first_name: 'Ant',
+        last_name: 'Chamberlin',
+        job: 'Frontend Developer',
+        company: 'MNA Digital'
+    }, 
+    methods: {
+        greet: function(time) {
+            return 'Good' + ' ' + time + ' ' + this.first_name;  
+        }
     }
 });
