@@ -11,14 +11,11 @@
 <body>
     <!-- Root element -->
     <div id="vue-app">
-        <!-- can use @ instead of v-on: -->
-        <button v-on:click.once="add(1)">Add a Year</button>
-        <button v-on:click="subtract(1)">Subtract a Year</button>
-        <button v-on:dblclick="add(5)">Add 5 Years</button>
-        <button v-on:dblclick="subtract(5)">Subtract 5 Years</button>
-        <h4>Age is {{ age }}</h4>
-        <a v-on:click.prevent="click" href="https://www.amazon.co.uk" target="_blank">Link</a>
-        <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+       <h3>Keyboard Events</h3>
+       <label>Name:</label>
+       <input type="text" v-on:keyup.enter="logName">
+       <label>Age:</label>
+       <input type="text" v-on:keyup.enter="logAge">
     </div>
 
     <script src="app.js"></script>
