@@ -11,14 +11,14 @@
 <body>
     <!-- Root element -->
     <div id="vue-app">
-       <h3>Keyboard Events</h3>
-       <label>Name:</label>
-       <input type="text" v-model="name">
-       <h5>{{ name }}</h5>
-       <label>Age:</label>
-       <input type="text" v-model="age">
-       <h5>{{ age }}</h5>
-    </div>
+       <h1>Computed Properties</h1>
+       <button v-on:click="a++">Add to A</button>
+       <button v-on:click="b++">Add to B</button>
+       <p>A = {{ a }}</p>
+       <p>B = {{ b }}</p>
+       <p>Age + A = {{ addToA }}</p>
+       <p>Age + B = {{ addToB }}</p>
+    </div> 
 
     <script src="app.js"></script>
 </body>
