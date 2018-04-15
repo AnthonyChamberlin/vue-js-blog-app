@@ -1,32 +1,31 @@
-new Vue({
-    el:'#vue-app',
+var one = new Vue({
+    el:'#vue-app-one',
     data: {
-       health: 100,
-       ended: false
+      title: 'Vue App One'
     },
     methods: {
-        punch: function() {
-            var changeStyle = document.getElementById("indicator").style;
+        
+    },
+    computed: {
+        greet: function(){
+            return 'Hello from app one!';
+        }
+    }
+});
 
-            this.health -= 10;
-
-            if (this.health <= 0) {
-                this.ended = true;
-            }
-            if (this.health <= 60) {
-                changeStyle.background = ("orange");
-            }
-            if (this.health <= 30) {
-                changeStyle.background = ("red");
-            }
-        },
-        restart: function() {
-            this.health = 100;
-            this.ended = false;
-            document.getElementById("indicator").style.background = ("green");
+var two = new Vue({
+    el:'#vue-app-two',
+    data: {
+        title: 'Vue App Two'
+    },
+    methods: {
+        changeTitle: function() {
+            one.title = "Title overwritten by app two! Muhaha"
         }
     },
     computed: {
-
+        greet: function() {
+            return 'Yo this is app two speaking!';
+        }
     }
 });
