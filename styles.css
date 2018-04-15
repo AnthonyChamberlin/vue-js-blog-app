@@ -1,0 +1,33 @@
+#bag {
+    width: 200px;
+    height: 500px;
+    margin: 0 auto;
+    background: url(/img/bag.png) center no-repeat;
+    background-size: 80%;
+}
+
+#bag.burst {
+    background: url(/img/bag-burst.png) center no-repeat;
+    background-size: 80%;
+}
+
+#bag-health {
+    width: 200px;
+    border: 2px solid #000;
+    margin: 0 auto 20px auto;
+}
+
+#indicator {
+    height: 20px;
+    background: green;
+    transition: .3s;
+}
+
+.change-background {
+    background: orange;
+}
+
+#controls {
+    width: 120px;
+    margin: 0 auto;
+}
